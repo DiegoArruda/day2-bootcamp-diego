@@ -18,7 +18,7 @@ public class Main {
         Produto pipoca = new Produto();
         pipoca.setPreco(2);
         double precoPipocaDescontado = pipoca.aplicarDesconto(pipoca.getPreco(),10);
-        System.out.println("Preço da pipoca depois do desconto: " +precoPipocaDescontado);
+        System.out.println("Preço da pipoca depois do desconto: " + precoPipocaDescontado);
 
     }
 }
