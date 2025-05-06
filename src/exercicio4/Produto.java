@@ -4,7 +4,7 @@ public class Produto {
     private double preco;
 
     public double aplicarDesconto(double preco, double desconto){
-        return preco - (desconto*100/preco);
+        return preco - (desconto*preco/100);
     }
 
     public double getPreco() {
