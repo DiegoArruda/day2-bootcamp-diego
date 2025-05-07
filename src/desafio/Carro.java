@@ -15,12 +15,6 @@ public class Carro extends Veiculo{
 
     @Override
     public String exibir_info() {
-        return "Veiculo{" +
-                "ano=" + getAno() +
-                ", modelo='" + getModelo() + '\'' +
-                ", marca='" + getMarca() + '\'' +
-                ", velocidade atual='" + getVelocidade() + '\'' +
-                ", número de portas='" + getNum_portas() + '\'' +
-                '}';
+        return super.exibir_info().replace("Veiculo", "Carro") + ", numero de portas - " + getNum_portas();
     }
 }

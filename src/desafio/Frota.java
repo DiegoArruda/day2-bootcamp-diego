@@ -6,23 +6,39 @@ public class Frota {
     ArrayList<Veiculo> veiculos;
     ArrayList<Motorista> motoristas;
 
-    public void adicionar_veiculo(Veiculo  veiculo){
+    public Frota() {
+        this.veiculos = new ArrayList<>();
+        this.motoristas = new ArrayList<>();
+    }
+
+    public void adicionar_veiculo(Veiculo veiculo) {
         veiculos.add(veiculo);
     }
 
-    public void adicionar_motorista(Motorista motorista){
+    public void adicionar_motorista(Motorista motorista) {
         motoristas.add(motorista);
     }
 
-    public void listar_frota(){
-        if(veiculos.isEmpty() && motoristas.isEmpty()){
+    public void listar_frota() {
+        if (veiculos.isEmpty() && motoristas.isEmpty()) {
             System.out.println("Não há motoristas e veiculos adicionados");
-        }else {
-            for (int i = 0; i < veiculos.size(); i++) {
-                System.out.println(veiculos.get(i));
+        } else {
+            if (veiculos.isEmpty()) {
+                System.out.println("Nenhum veículo adicionado.");
+            } else {
+                System.out.println("Veículos na Frota ");
+                for (Veiculo veiculo : veiculos) {
+                    System.out.println(veiculo.exibir_info());
+                }
             }
-            for (int i = 0; i < motoristas.size(); i++) {
-                System.out.println(motoristas.get(i));
+
+            if (motoristas.isEmpty()) {
+                System.out.println("Nenhum motorista adicionado.");
+            } else {
+                System.out.println("Motoristas na Frota ");
+                for (Motorista motorista : motoristas) {
+                    System.out.println("Motorista: " + motorista.getNome());
+                }
             }
         }
     }

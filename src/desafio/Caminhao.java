@@ -14,12 +14,6 @@ public class Caminhao extends Veiculo{
 
     @Override
     public String exibir_info() {
-        return "Veiculo{" +
-                "ano=" + getAno() +
-                ", modelo='" + getModelo() + '\'' +
-                ", marca='" + getMarca() + '\'' +
-                ", velocidade atual='" + getVelocidade() + '\'' +
-                ", capacidade de carga ='" + getCapacidade_carga() + '\'' +
-                '}';
+        return super.exibir_info().replace("Veiculo", "Caminhao") + ", capacidadeCarga - " + getCapacidade_carga() + " toneladas";
     }
 }

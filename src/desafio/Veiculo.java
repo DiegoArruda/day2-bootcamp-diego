@@ -12,14 +12,14 @@ public class Veiculo {
         this.ano = ano;
     }
 
-    public float acelerar(float velocidade){
-        return velocidade + 10;
+    public float acelerar(){
+        return this.velocidade += 10;
     }
 
-    public float frear(float velocidade){
-        if(velocidade >= 10){
-            return velocidade - 10;
-        } else return 0;
+    public float frear(){
+        if(this.velocidade >= 10){
+            return this.velocidade -= 10;
+        } else return this.velocidade = 0;
 
     }
 
@@ -42,11 +42,11 @@ public class Veiculo {
 
 
     public String exibir_info() {
-        return "Veiculo{" +
-                "ano=" + getAno()+
-                ", modelo='" + getModelo() + '\'' +
-                ", marca='" + getMarca() + '\'' +
-                ", velocidade atual='" + getVelocidade() + '\'' +
-                '}';
+        return "Veiculo:" +
+                " ano - " + getAno()+
+                ", modelo - '" + getModelo() + '\'' +
+                ", marca - '" + getMarca() + '\'' +
+                ", velocidade atual - '" + getVelocidade() + " km/h" + '\''
+                ;
     }
 }
