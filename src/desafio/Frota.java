@@ -11,14 +11,6 @@ public class Frota {
         this.motoristas = new ArrayList<>();
     }
 
-    public ArrayList<Veiculo> getVeiculos() {
-        return new ArrayList<Veiculo>(veiculos);
-    }
-
-    public ArrayList<Motorista> getMotoristas() {
-        return new ArrayList<>(motoristas);
-    }
-
     public void adicionar_veiculo(Veiculo veiculo) {
         veiculos.add(veiculo);
     }
