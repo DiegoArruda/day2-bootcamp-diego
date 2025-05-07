@@ -3,12 +3,20 @@ package desafio;
 import java.util.ArrayList;
 
 public class Frota {
-    ArrayList<Veiculo> veiculos;
-    ArrayList<Motorista> motoristas;
+    private ArrayList<Veiculo> veiculos;
+    private ArrayList<Motorista> motoristas;
 
     public Frota() {
         this.veiculos = new ArrayList<>();
         this.motoristas = new ArrayList<>();
+    }
+
+    public ArrayList<Veiculo> getVeiculos() {
+        return new ArrayList<Veiculo>(veiculos);
+    }
+
+    public ArrayList<Motorista> getMotoristas() {
+        return new ArrayList<>(motoristas);
     }
 
     public void adicionar_veiculo(Veiculo veiculo) {
@@ -37,7 +45,7 @@ public class Frota {
             } else {
                 System.out.println("Motoristas na Frota ");
                 for (Motorista motorista : motoristas) {
-                    System.out.println("Motorista: " + motorista.getNome());
+                    System.out.println(motorista.getNome());
                 }
             }
         }

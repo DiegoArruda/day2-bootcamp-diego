@@ -35,7 +35,6 @@ public class Veiculo {
         return ano;
     }
 
-
     public float getVelocidade() {
         return velocidade;
     }
